@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <!-- <link href="style2.css" rel="stylesheet" /> -->
+    <link rel="icon" href="images/start.png" type="image/png">
+    <title>Open</title>
+</head>
+<style>
+    body{
+      background-image: url("images/open.png"); 
+      text-align: center;
+    }
+    h1{
+        font-size: 700%;
+        font: bold;
+      
+    }
+    button{
+        background-color: black;
+        color:rgb(255, 213, 0) ;
+        border-radius: 50%;
+        height:150px ;
+        width: 150px;
+        font-family: Segoe Print;
+        margin: 5%;
+        border :10px solid rgb(255, 213, 0) ;
+    }
+    #levels{
+        display: block;
+        flex-wrap: wrap;
+       align-content: stretch;
+       align-items: flex-start;
+       
+    }
+    a{
+        
+        width: 150px;
+        border :10px solid rgb(255, 213, 0) ;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <h1>MEMORY GAME</h1>
+   
+  <div id="levels">
+    <button class="level" value="8">level 1</button>
+    <button class="level" value="10">level 2</button>
+    <button class="level" value="12">level 3</button>
+
+  </div>
+
+  <a id="play" href="game.html"> Start</a>
+    <script>
+        let arr=document.querySelectorAll("button");
+        for (let i = 0; i < arr.length; i++) {
+            // arr[i].addEventListener("mouseover",change)
+            arr[i].addEventListener("click",level)
+        }
+        function level(){
+            event.target.style.backgroundColor= "rgb(255, 213, 0)";
+            event.target.style.color= "black";
+            localStorage.setItem("level", event.target.value);
+             
+         
+        }
+        function change(){
+            event.target.style.backgroundColor= "rgb(255, 213, 0)";
+            event.target.style.color= "black";
+            setInterval(() => {
+                event.target.style.backgroundColor= "black";
+                event.target.style.color= "rgb(255, 213, 0)";
+            }, 200);
+            
+       
+        }
+
+    </script>
+</body>
+
+</html>

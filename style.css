@@ -1,0 +1,45 @@
+body{
+  
+     font-family: Segoe Print;
+}
+.card{
+    height: 150px;
+    width: 150px;
+    border: solid 5px black;
+    border-radius: 6%;
+    margin: 9px;
+   
+}
+#play{
+    display: inline-block;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: flex-start;
+ 
+   
+}
+#manager{
+   
+    margin-top: 2%;
+    margin-bottom: 1%; 
+    direction: rtl;
+    font-size: 150%;
+    background-color: rgb(255, 213, 0);
+    color: #000;
+    border: solid 5px black;
+    border-radius:10px;
+    text-align: center;
+   
+}
+#ourGame{
+    
+    text-align: center;
+    font-size: 100%;
+
+}
+a{
+    font-size:medium;
+    background-color: #000;
+    color:rgb(255, 213, 0);
+    margin: 1%;
+}
